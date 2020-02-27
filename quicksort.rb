@@ -1,4 +1,6 @@
 class Quicksort
+  
+  attr_accessor :strategy
 
   def initialize(partition_strategy)
     @strategy = partition_strategy
