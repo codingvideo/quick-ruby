@@ -4,10 +4,7 @@ require './efficient_partition_strategy'
 
 print "Please enter numbers: "
 input = gets
-data = []
-input.split.each do |item|
-  data << item.to_i
-end
+data = input.split.map {|item| item.to_i }
 
 efficient_strategy = EfficientPartitionStrategy.new
 quicksort = Quicksort.new(efficient_strategy)
