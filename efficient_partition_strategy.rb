@@ -1,4 +1,8 @@
+require './swappable'
+
 class EfficientPartitionStrategy
+
+  include Swappable # swap
 
   def partition(data, first, last)
     pivot = data[(first+last)/2]
@@ -24,16 +28,6 @@ class EfficientPartitionStrategy
       else
         return j
       end
-    end
-  end
-  
-  private
-
-  def swap(data, a, b)
-    if(a != b)
-      x = data[a]
-      data[a] = data[b]
-      data[b] = x
     end
   end
 end #class

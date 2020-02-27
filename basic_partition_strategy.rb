@@ -1,4 +1,8 @@
+require './swappable'
+
 class BasicPartitionStrategy
+
+  include Swappable # swap
 
   def initialize(compare)
     @compare = compare
@@ -17,15 +21,5 @@ class BasicPartitionStrategy
     mid = right_first-1
     swap(data, first, mid)
     return mid
-  end
-  
-  private
-
-  def swap(data, a, b)
-    if(a != b)
-      x = data[a]
-      data[a] = data[b]
-      data[b] = x
-    end
   end
 end #class
